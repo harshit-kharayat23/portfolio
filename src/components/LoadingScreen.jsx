@@ -64,7 +64,7 @@ const LoadingScreen = ({ onComplete }) => {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center ">
+        <div className="fixed inset-0 z-50 flex items-center justify-center  bg-gradient-to-r from-gray-900 to-black ">
             {/* Subtle gradient overlay with animation */}
             <motion.div 
                 className="absolute inset-0 "
@@ -85,7 +85,7 @@ const LoadingScreen = ({ onComplete }) => {
                     <motion.h1
                         initial={{color:'#040714'}}
                         animate={{color:["#401c39","#924291","#8495b4","#aaa508","#100c13"]}}
-                        transition={{duration:3,repeat:Infinity}}
+                        transition={{duration:4,repeat:Infinity,ease:"linear"}}
                         variants={textVariants}
                         className="text-5xl md:text-8xl font-bold text-neutral-900 leading-tight tracking-tight"
                     >
@@ -140,7 +140,7 @@ const LoadingScreen = ({ onComplete }) => {
                         {[0, 1, 2].map((i) => (
                             <motion.div
                                 key={i}
-                                className="w-1.5 h-1.5 bg-slate-300 rounded-full"
+                                className="w-1 h-1 bg-slate-300 rounded-full"
                                 animate={{
                                     scale: [1, 1.3, 1],
                                     opacity: [0.4, 0.8, 0.4]
@@ -161,7 +161,7 @@ const LoadingScreen = ({ onComplete }) => {
             {[...Array(4)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-2 h-2 bg-slate-300 rounded-full"
+                    className="absolute w-1 h-1 bg-slate-300 rounded-full"
                     style={{
                         left: `${15 + i * 20}%`,
                         top: `${25 + (i % 2) * 50}%`,
