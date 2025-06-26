@@ -12,7 +12,7 @@ const Home = () => {
     }}}
     className=' h-screen w-full flex flex-col gap-12 justify-center items-center '>
         <div className=' md:w-1/3  w-full text-center md:px-0 px-4  flex flex-col items-center gap-10'>
-        <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-fuchsia-400 to-indigo-700 bg-clip-text text-transparent '>Hie, I'm Priyanshu</h2>
+        <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-[#3f3d43] to-[#7a1bc8] bg-clip-text text-transparent '>Hie, I'm Priyanshu</h2>
         <motion.p 
          initial={{color:'#73aada'}}
            animate={{
