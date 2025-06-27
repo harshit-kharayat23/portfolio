@@ -1,0 +1,68 @@
+[
+    {
+        "id":1,
+        "title":"html",
+        "img": "src/assets/html.jpg"
+    },
+    {
+        "id":2,
+        "title":"css",
+        "img": "src/assets/css.jpg"
+    },
+    {
+        "id":3,
+        "title":"js",
+        "img": "src/assets/js.webp"
+    },
+    {
+        "id":4,
+        "title":"tailwind",
+        "img": "src/assets/tailwind.png"
+    },
+    {
+        "id":5,
+        "title":"react",
+        "img": "src/assets/react.png"
+    },
+    {
+        "id":6,
+        "title":"redux",
+        "img": "src/assets/redux.webp"
+    },
+    {
+        "id":7,
+        "title":"framer",
+        "img": "src/assets/framer.webp"
+    },
+    {
+        "id":8,
+        "title":"typescript",
+        "img": "src/assets/ts.jpg"
+    },
+    {
+        "id":9,
+        "title":"node",
+        "img": "src/assets/node.jpg"
+    },
+    {
+        "id":10,
+        "title":"express",
+        "img": "src/assets/express-js.png"
+    },
+    {
+        "id":11,
+        "title":"mongo db",
+        "img": "src/assets/mongo.webp"
+    },
+    {
+        "id":12,
+        "title":"rest api",
+        "img": "src/assets/rest.jpg"
+    },
+    {
+        "id":13,
+        "title":"next",
+        "img": "src/assets/next.png"
+    }
+    
+]

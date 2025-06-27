@@ -64,7 +64,7 @@ const LoadingScreen = ({ onComplete }) => {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center  bg-gradient-to-r from-gray-900 to-black ">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-tr from-[#060606] via-45% via-[#0c0b0c] to-[#0e0e11] ">
             {/* Subtle gradient overlay with animation */}
             <motion.div 
                 className="absolute inset-0 "

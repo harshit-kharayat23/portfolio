@@ -8,7 +8,7 @@ import About from './components/sections/About'
 const App = () => {
   const [isloaded, setIsloaded]= useState(false)
   return (
-    <div className=' h-full w-full pb-10 bg-gradient-to-r from-gray-900 to-black overflow-x-hidden'>
+    <div className=' h-full w-full pb-10 bg-gradient-to-tr from-[#020202] via-45% via-[#0e0c0e] to-[#09090b] overflow-x-hidden'>
      {!isloaded&&<LoadingScreen onComplete={()=>setIsloaded(true)}/>}{" "}
      { isloaded&& <div className=' min-h-screen transition-opacity duration-700 '>
     <Navbar/>
