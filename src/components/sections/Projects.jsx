@@ -1,8 +1,11 @@
 import React from 'react'
+import Card from './ui/Card'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div className='  h-full w-full p-4'>
+      <Card/>
+    </div>
   )
 }
 

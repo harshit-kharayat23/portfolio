@@ -26,11 +26,10 @@ const Home = () => {
     ],
           }}
         
-         transition={{duration:5,repeat:Infinity, repeatType: "reverse",ease: "linear"}}
+         transition={{duration:3,repeat:Infinity, repeatType: "reverse",ease: "linear"}}
                         // variants={textVariants}
 
-        className='   text-sm text-center'>A passionate web developer dedicated to crafting fast, responsive, and visually stunning websites.
-         With expertise in JavaScript, React, Node.js, and modern CSS frameworks like Tailwind, I build seamless and interactive web experiences.</motion.p>
+        className='   text-sm text-center'>A passionate <span className=' text-base text-[#6ebfc8]'>Full Stack Developer</span> dedicated to crafting fast, responsive, and visually stunning websites...</motion.p>
     </div>
     <div className=' md:w-1/3 w-full px-10 flex gap-12 text-white justify-center'>
       <motion.span

@@ -244,7 +244,7 @@ const About = () => {
           
           <motion.p 
             variants={itemVariants}
-            className='text-base bg-gradient-to-t from-[#494849] to-[rgb(175,175,180)] bg-clip-text text-transparent md:w-3/5 md:text-left text-center'
+            className='text-base bg-gradient-to-t from-[#656265] to-[rgb(175,175,180)] bg-clip-text text-transparent md:w-3/5 md:text-left text-center'
           >
             Whether it's a sleek front-end interface or a scalable full-stack application, I focus on writing clean, efficient code while keeping user experience at the forefront.
           </motion.p>
