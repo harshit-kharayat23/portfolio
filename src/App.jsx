@@ -5,6 +5,7 @@ import Navbar from './components/sections/Navbar'
 import Home from './components/sections/Home'
 import About from './components/sections/About'
 import Projects from './components/sections/Projects'
+import Contact from './components/sections/Contact'
 
 const App = () => {
   const [isloaded, setIsloaded]= useState(false)
@@ -21,6 +22,9 @@ const App = () => {
     </section>
     <section id='projects'>
     <Projects/>
+    </section>
+    <section id='contact'>
+    <Contact/>
     </section>
       </div>}
     </div>

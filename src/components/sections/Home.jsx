@@ -3,6 +3,16 @@ import { motion } from 'motion/react'
 
 
 const Home = () => {
+  const handleScrollToSection=(sectionId)=>{
+    const element = document.getElementById(sectionId)
+    if(element){
+      element.scrollIntoView({
+        behavior:'smooth',
+        block:"start"
+      })
+    }
+  }
+
   return (
     <motion.div
     initial={{opacity:0}}
@@ -10,7 +20,7 @@ const Home = () => {
     duration:2,
     ease:"linear"
     }}}
-    className=' h-screen w-full flex flex-col gap-12 justify-center items-center '>
+    className=' h-screen w-full flex flex-col gap-20 justify-center items-center '>
         <div className=' md:w-1/3  w-full text-center md:px-0 px-4  flex flex-col items-center gap-10'>
         <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-[#b6b4b6] to-[#232323] bg-clip-text text-transparent '>Hie, I'm Priyanshu</h2>
         <motion.p 
@@ -35,13 +45,14 @@ const Home = () => {
       <motion.span
       initial={{scale:1}}
       whileHover={{scale:0.9,transition:{ease:"linear"}}}
+    onClick={()=>handleScrollToSection('projects')}
 
-      className=' w-32  cursor-pointer text-[#d1d0d0]   md:text-base text-sm  text-center  py-2 rounded-lg  bg-gradient-to-t border border-[#323232]  font-medium from-[#3b3b3b] to-[#080808] shadow-md shadow-[#202020] will-change-transform'>View Projects</motion.span>
+      className=' w-32  cursor-pointer text-[#d1d0d0]   md:text-base text-sm  text-center  py-2 rounded-lg  bg-gradient-to-t border border-[#323232]  font-medium from-[#3b3b3b] to-[#080808] shadow-lg/30 shadow-[#737373] will-change-transform'>View Projects</motion.span>
       <motion.span
       initial={{scale:1}}
       whileHover={{scale:0.9,transition:{ease:"linear"}}}
-
-      className=' w-32  cursor-pointer   md:text-base text-sm border   text-center bg-gradient-to-t from-[#ffffff]  to-[#c3c0c0]  text-[#111] shadow-md shadow-[#3d3d3d]  font-medium  py-2 rounded-lg border-[#bcb7b7]   will-change-transform'>Contact Me</motion.span>
+    onClick={()=>handleScrollToSection('contact')}
+      className=' w-32  cursor-pointer   md:text-base text-sm border   text-center bg-gradient-to-t from-[#ffffff]  to-[#c3c0c0]  text-[#111] shadow-lg/30 shadow-[#c8c6c6]  font-medium  py-2 rounded-lg border-[#bcb7b7]   will-change-transform'>Contact Me</motion.span>
     </div>
     </motion.div>
   )

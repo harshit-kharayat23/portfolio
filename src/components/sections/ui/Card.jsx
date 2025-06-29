@@ -1,6 +1,8 @@
 import { motion } from "motion/react"
 
-const Card = ({}) => {
+const Card = ({project}) => {
+  const {title,description,tech,gitLink,bgUrl,from,to} = project
+  const liveLink = project?.liveLink
   return (
       <motion.div
         initial={{opacity:0}}
@@ -11,9 +13,11 @@ const Card = ({}) => {
           viewport={{
             once:true
           }}
-        className='card w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] min-w-[300px] min-h-[300px] rounded-3xl delay-300 duration-500 ease-in-out transition-all hover:scale-[0.98] p-5 relative overflow-hidden group bg-zinc-900 shadow-lg shadow-black/50 hover:shadow-xl hover:shadow-black/70'>
+        className='card md:max-w-[30vw] md:w-[26vw] md:h-[30vw] md:max-h-[30vw]    w-full rounded-3xl delay-300 duration-500 ease-in-out transition-all hover:scale-[0.98] md:p-5 relative overflow-hidden group bg-zinc-900 shadow-xl/40 shadow-[#494747]   hover:shadow-xl hover:shadow-black/70 '>
                     {/* Background with parallax effect on hover */}
-            <div className='w-full absolute inset-0 z-0 opacity-70 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700 h-full rounded-3xl bg-[url(https://img.freepik.com/free-photo/view-3d-cinema-elements_23-2150720820.jpg)] bg-cover bg-center bg-no-repeat'></div>
+            <div
+             style={{ backgroundImage: `url('${bgUrl}')` }}
+            className={`w-full absolute inset-0 z-0 opacity-70 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700 h-full rounded-3xl  bg-cover bg-center bg-no-repeat`}></div>
   
             {/* Glow overlay */}
             <div className='absolute inset-0 z-1 bg-gradient-to-b from-transparent via-black/70 to-black/90 rounded-3xl'></div>
@@ -22,42 +26,56 @@ const Card = ({}) => {
             <div className='h-full w-full rounded-2xl flex flex-col items-center p-6 gap-6 justify-end relative z-10'>
             {/* Title with shine effect */}
             <div className='flex flex-col w-full text-white font-bold uppercase text-xl text-center'>
-            <h3  className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-300 to-gray-800 font-extrabold text-2xl drop-shadow-lg'>
-        🎬 Moviezz
+            <h3
+            style={{ 
+          backgroundImage: `linear-gradient(to top, ${from}, ${to})`
+         }}
+            className={`text-transparent bg-clip-text   font-extrabold text-2xl drop-shadow-lg`}>
+        {title}
             </h3>
-            <p className='text-sm font-normal normal-case mt-2 text-zinc-300'>
-            AI-Powered Movie Discovery Platform
+            <p className='md:text-sm text-xs font-normal normal-case mt-2 text-zinc-300'>
+            {description}
             </p>
             </div>
     
              {/* Feature pills */}
             <div className='flex flex-wrap justify-center gap-2 w-full'>
-      <span className='px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>React.js</span>
-      <span className='px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>TMDB API</span>
-      <span className='px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>AI Search</span>
-      <span className='px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>Tailwind CSS</span>
-      <span className='px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>Firebase</span>
+          {
+            tech.map((title,index)=>{
+              return(
+          <span
+          key={index}
+          className='md:px-3 px-2 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white border border-zinc-600/50'>{title}
+          </span>
+              )
+         
+            })
+          }
 
+      
             </div>
     
               {/* CTA Buttons */}
-            <div className='flex gap-3 w-full'>
-      <a 
-        href='https://netflix-ai-6b2ce.firebaseapp.com' 
-        target='_blank'
+            <div className='flex gap-4 w-full justify-center my-4'>
+     
+   {
+    liveLink&&
+   <motion.a
+           href={liveLink} 
+             target='_blank'
         rel='noopener noreferrer'
-        className='flex-1 will-change-transform text-center px-4 py-2 bg-gradient-to-r from-[#1e1d1d]   to-[#080808] shadow-2xl/60 shadow-[#414141] rounded-full text-white font-medium text-sm  transition-all duration-300 shadow-sm hover:[shadow-zinc-500] hover:scale-[1.01]  font-monoserrat'
-      >
-        Live Demo
-      </a>
-      <a 
-        href='https://github.com/Priyanshu090803/Moviezzzzz......' 
-        target='_blank'
+            initial={{scale:1}}
+            whileHover={{scale:0.9,transition:{ease:"linear"}}}
+            
+      className='  cursor-pointer text-[#d1d0d0]   md:text-base text-sm  text-center  py-1 px-2 w-28 rounded-lg  bg-gradient-to-t border border-[#323232]  font-medium from-[#3b3b3b] to-[#080808] shadow-lg/30 shadow-[#737373] will-change-transform'>   Live Demo  </motion.a>
+       }
+        <motion.a
+           href={gitLink}
+             target='_blank'
         rel='noopener noreferrer'
-        className= 'flex-1 will-change-transform text-center px-4 py-2 bg-gradient-to-r from-[#ffffff] to-[#3f3f3f0e] shadow-2xl/40 shadow-[#ffffff] rounded-full text-black font-semibold text-sm  transition-all duration-300 shadow-sm hover:shadow-zinc-500 hover:scale-[1.01]  font-monoserrat '
-      >
-        GitHub
-      </a>
+            initial={{scale:1}}
+            whileHover={{scale:0.9,transition:{ease:"linear"}}}
+            className='  cursor-pointer   md:text-base text-sm border   text-center bg-gradient-to-t from-[#ffffff]  to-[#c3c0c0]  text-[#111] shadow-lg/30 shadow-[#c8c6c6]  font-medium  py-1 px-2 w-28 rounded-lg border-[#bcb7b7]   will-change-transform'>GitHub  </motion.a>
              </div>
              </div>
   

@@ -1,105 +1,4 @@
-
-// import { motion } from "motion/react"
-// import data from '../../utils/skills.json'
-
-// const About = () => {
-//   const containerVariants = {
-//     hidden: { opacity: 0 },
-//     visible: {
-//       opacity: 1,
-//       transition: {
-//         delay: 0.3,
-//         staggerChildren: 0.3,
-//       }
-//     }
-//   }
-  
-//   const itemVariants = {
-//     hidden: { opacity: 0, x: -200 },
-//     visible: {
-//       opacity: 1,
-//       x: 0,
-//       transition: {
-//         duration: 1,
-//         ease: "easeInOut"
-//       }
-//     }
-//   }
-  
-//   return (
-//     <div className=' h-full w-full     flex flex-col  gap-40  md:px-50 px-4  py-10'>
-//       <div className="  w-full flex md:flex-row flex-col justify-center  gap-15 ">
-//          <motion.div 
-//         className='md:w-1/2 w-full flex flex-col gap-8 md:items-start items-center'
-//         initial="hidden"
-//         whileInView="visible"
-//         viewport={{ once: true, amount: 0.3 }}
-//         variants={containerVariants}
-//       >
-//         <motion.h2
-//           variants={itemVariants}
-//           className='text-2xl uppercase   md:text-8xl font-bold bg-gradient-to-t from-gray-700 to-fuchsia-600 bg-clip-text text-transparent'
-//         >
-//           About Me
-//         </motion.h2>
-        
-//         <motion.p 
-//           variants={itemVariants}
-//           className='text-base bg-gradient-to-t from-[#3b1a7e] to-[rgb(188,161,234)] bg-clip-text text-transparent md:w-3/5 md:text-left text-center'
-//         >
-//           Whether it's a sleek front-end interface or a scalable full-stack application, I focus on writing clean, efficient code while keeping user experience at the forefront.
-//         </motion.p>
-//       </motion.div>
-      
-//         <motion.div
-//         initial={{ x: 200, opacity: 0 }} // Reduced initial x for mobile
-//         whileInView={{ 
-//           x: 0, 
-//           opacity: 1,
-//           transition: { duration: 1, ease: "easeInOut" } // Faster animation
-//         }}
-//         viewport={{ once: true, margin: "-100px" }} // Adjusted margin
-//         className='w-full md:w-1/2 flex justify-end p-4'
-//       >
-//         <img
-//           src='src/assets/myPhoto.jpg'
-//           className='max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl'
-//           alt="Profile"
-//           onError={(e) => {
-//             e.target.src = 'https://via.placeholder.com/360x400';
-//             e.target.alt = 'Placeholder image';
-//           }}
-//         />
-//       </motion.div>
-//       </div>
-     
-//        <div className="   h-full   w-full flex flex-col items-center gap-12 ">
-//         <h3 className="  text-4xl   text-transparent bg-gradient-to-t from-[#3a5d92] to-[#7d7c7f] bg-clip-text ">My skills</h3>
-//          <div className="      w-full flex gap-4 justify-center  flex-wrap">
-//           {
-//             data.map((item,index)=>{
-//                     return(
-//               <div className="   w-[200px] h-[80px] border rounded-lg border-neutral-600 flex gap-4 p-2 ">
-//                 <span className=" text-white">{item.title}</span>
-//                 <img 
-//                 className=" h-10 w-9 object-cover"
-//                 src={`${item.img}`}
-//                 />
-//               </div>
-//                 )
-              
-             
-//             })
-//           }
-//          </div>
-//        </div>
-//     </div>
-//   )
-// }
-
-// export default About
-
-
+ 
 
 import { motion } from "motion/react"
 import { 
@@ -119,6 +18,7 @@ import {
   SiNextdotjs 
 } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
+import Experience from "./ui/experience"
 
 const About = () => {
   // Skills data with React Icons
@@ -226,7 +126,7 @@ const About = () => {
   }
   
   return (
-    <div className='h-full w-full flex flex-col gap-40 md:px-50 px-4 py-10 '>
+    <div className='h-full w-full flex flex-col gap-20 md:gap-40 md:px-50 px-4 py-10 '>
       <div className="w-full flex md:flex-row flex-col justify-center gap-15">
         <motion.div 
           className='md:w-1/2 w-full flex flex-col gap-8 md:items-start items-center'
@@ -261,8 +161,8 @@ const About = () => {
           className='w-full md:w-1/2 flex justify-end p-4'
         >
           <img
-            src='src/assets/myPhoto.jpg'
-            className='max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl'
+            src='src/assets/photo5.jpg'
+            className='max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl/40 shadow-[#f5f3f3]'
             alt="Profile"
             onError={(e) => {
               e.target.src = 'https://via.placeholder.com/360x400';
@@ -271,7 +171,8 @@ const About = () => {
           />
         </motion.div>
       </div>
-     
+     <Experience/>  
+
       <div className="h-full w-full flex flex-col items-center gap-12">
         <motion.h3 
           initial={{ opacity: 0, y: -20 ,scale:0.6}}

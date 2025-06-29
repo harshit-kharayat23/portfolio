@@ -17,16 +17,16 @@ const Navbar = () => {
         <div className='md:h-10 md:w-10 h-9 w-9 rounded-full overflow-hidden relative cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300'>
           <img 
           onClick={()=>handleScrollToSection('home')}
-          src={"src/assets/profile.jpg"}
+          src={"src/assets/photo5.jpg"}
              style={{
               position: 'absolute',
-              top: '50%',
+              top: '60%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              minWidth: '100%',
-              minHeight: '100%'
+              minWidth: '200%',
+              minHeight: '130%'
             }}
-          className='h-full w-full object-fill group-hover:scale-110 transition-transform duration-300'
+          className='h-full w-full object-contain group-hover:scale-110 transition-transform duration-300'
           />
           <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full'></div>
         </div>
