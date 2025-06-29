@@ -18,7 +18,7 @@ import {
   SiNextdotjs 
 } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
-import Experience from "./ui/experience"
+import Experience from "./ui/Experience.jsx"
 
 const About = () => {
   // Skills data with React Icons
