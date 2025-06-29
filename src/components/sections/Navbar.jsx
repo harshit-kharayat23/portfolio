@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='md:h-10 md:w-10 h-9 w-9 rounded-full overflow-hidden relative cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300'>
           <img 
           onClick={()=>handleScrollToSection('home')}
-          src={"src/assets/photo5.jpg"}
+          src={"https://avatars.githubusercontent.com/u/156987012?s=400&u=fc5fecd280f5767bf0d11f5b8f081740d79b4a89&v=4"}
              style={{
               position: 'absolute',
               top: '60%',

@@ -161,7 +161,7 @@ const About = () => {
           className='w-full md:w-1/2 flex justify-end p-4'
         >
           <img
-            src='src/assets/photo5.jpg'
+            src='https://avatars.githubusercontent.com/u/156987012?s=400&u=fc5fecd280f5767bf0d11f5b8f081740d79b4a89&v=4'
             className='max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl/40 shadow-[#f5f3f3]'
             alt="Profile"
             onError={(e) => {
