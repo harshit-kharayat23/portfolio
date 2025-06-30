@@ -1,9 +1,30 @@
 import { motion } from "motion/react"
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
+import emailjs from "emailjs-com"
+import { useState } from "react"
+
 const Contact = () => {
+  const [formData,setFormData] =useState({
+    name:"",
+    email:"",
+    message:""
+  })
+ 
   const handelSubmit =(e)=>{
+      e.preventDefault()
       
+      emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY).then((res)=>{
+        alert("Message sent!")
+        setFormData({name:"",email:"",message:""})
+
+      }).catch(()=>{
+        alert("Something went wrong! Please try again")
+      })
   }
   return (
     <div className=' h-full w-full  flex flex-col md:p-10 p-4 gap-20  '>
@@ -47,7 +68,7 @@ const Contact = () => {
         </div>
         <div className=" md:w-1/2 w-full h-full">
         <motion.form
-        onSubmit={handelSubmit( )}
+        onSubmit={handelSubmit}
         initial={{z:0,y:0}}
         whileHover={{
           z:20,
@@ -66,11 +87,24 @@ const Contact = () => {
         className=" bg-gradient-to-t from-[#050505] to-[#121212] md:w-3/4 w-full  py-10  md:px-10 px-4 h-full border rounded-lg shadow-xl/35 shadow-[#525151] border-[#1f1e1e] flex flex-col items-center gap-8 
         "
         >
+         <input //Add name attributes to your inputs (EmailJS uses these to map form data)
+          name="from_name"     // ye emailJs k liye h, same cheez emailJs template m h tabhi dikhega gmail mai data
+        value={formData.name}
+        onChange={(e)=>setFormData({...formData,name:e.target.value})}
+        placeholder="Name... "
+        type="text" id="name" className=" md:w-[75%] w-full outline-neutral-800 focus:outline-neutral-600 duration-300 delay-150 ease-out  outline rounded-lg md:text-base text-sm px-4 py-2 text-neutral-300 font-light "></input>
+         
         <input 
-        placeholder="Your email......."
+        name="from_email" 
+        value={formData.email}
+        onChange={(e)=>setFormData({...formData,email:e.target.value})}
+        placeholder="Email....."
         type="email" id="email" className=" md:w-[75%] w-full outline-neutral-800 focus:outline-neutral-600 duration-300 delay-150 ease-out  outline rounded-lg md:text-base text-sm px-4 py-2 text-neutral-300 font-light "></input>
          
         <textarea
+         name="message"
+        value={formData.message}
+        onChange={(e)=>setFormData({...formData,message:e.target.value})}
         rows={4}
         placeholder="Your message ....."
         type="text"    className=" md:w-[75%] w-full outline-neutral-800 focus:outline-neutral-600 duration-300 delay-150 ease-out  outline rounded-lg md:text-base text-sm px-4 py-2 font-light text-neutral-300"></textarea>
