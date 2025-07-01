@@ -1,6 +1,4 @@
-
-
-
+ 
 
 import { motion } from 'framer-motion'
 import Card from './ui/Card'
@@ -110,10 +108,10 @@ const Projects = () => {
   };
 
   return (
-    <div className='h-full w-full flex flex-col md:gap-30 gap-10  py-20 md:px-20 px-5'>
+    <div className='h-full w-full flex flex-col gap-10 md:gap-16 lg:gap-20 xl:gap-30 py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20'>
       <div className='h-full w-full flex justify-center'>
         <motion.h3 
-          className='md:text-8xl text-5xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-t from-[#131010] to-[#dddddd]'
+          className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-t from-[#131010] to-[#dddddd] text-center'
           variants={titleVariants}
           initial="hidden"
           animate="visible"
@@ -123,16 +121,16 @@ const Projects = () => {
       </div>
       
       <motion.div 
-        className='w-full h-full gap-10 flex flex-wrap justify-center'
+        className='w-full h-full gap-6 sm:gap-8 md:gap-10 flex flex-wrap justify-center items-start'
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {projectsArray.map((project, index) => (
           <motion.div
-          className='  '
             key={index}
             variants={cardVariants}
+            className='w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] xl:w-[calc(30%-1.5rem)] max-w-[400px] min-w-[280px]'
           >
             <Card project={project} />
           </motion.div>

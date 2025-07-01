@@ -30,3 +30,6 @@ html,body{
         animation: loading 0.9s ease-in-out infinite;
     }
 }
+html {
+  scroll-behavior: smooth;
+}

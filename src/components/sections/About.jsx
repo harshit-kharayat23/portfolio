@@ -126,10 +126,10 @@ const About = () => {
   }
   
   return (
-    <div className='h-full w-full flex flex-col gap-20 md:gap-40 md:px-50 px-4 py-10 '>
-      <div className="w-full flex md:flex-row flex-col justify-center gap-15">
+    <div className='h-full w-full flex flex-col gap-10 sm:gap-16 md:gap-20 lg:gap-32 xl:gap-40 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-6 sm:py-8 md:py-10'>
+      <div className="w-full flex md:flex-row flex-col justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-15">
         <motion.div 
-          className='md:w-1/2 w-full flex flex-col gap-8 md:items-start items-center'
+          className='md:w-1/2 w-full flex flex-col gap-4 sm:gap-6 md:gap-8 md:items-start items-center'
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -137,14 +137,14 @@ const About = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className='text-2xl uppercase md:text-8xl font-bold bg-gradient-to-t from-[#3c3b3e] to-[#e1dbe5] bg-clip-text text-transparent'
+            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-bold bg-gradient-to-t from-[#3c3b3e] to-[#e1dbe5] bg-clip-text text-transparent text-center md:text-left'
           >
             About Me
           </motion.h2>
           
           <motion.p 
             variants={itemVariants}
-            className='text-base bg-gradient-to-t from-[#656265] to-[rgb(175,175,180)] bg-clip-text text-transparent md:w-3/5 md:text-left text-center'
+            className='text-sm sm:text-base md:text-lg bg-gradient-to-t from-[#656265] to-[rgb(175,175,180)] bg-clip-text text-transparent w-full md:w-4/5 lg:w-3/5 md:text-left text-center leading-relaxed'
           >
             Whether it's a sleek front-end interface or a scalable full-stack application, I focus on writing clean, efficient code while keeping user experience at the forefront.
           </motion.p>
@@ -158,11 +158,11 @@ const About = () => {
             transition: { duration: 1, ease: "easeInOut" }
           }}
           viewport={{ once: true, margin: "-100px" }}
-          className='w-full md:w-1/2 flex justify-end p-4'
+          className='w-full md:w-1/2 flex justify-center md:justify-end p-2 sm:p-4'
         >
           <img
             src='https://avatars.githubusercontent.com/u/156987012?s=400&u=fc5fecd280f5767bf0d11f5b8f081740d79b4a89&v=4'
-            className='max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl/40 shadow-[#f5f3f3]'
+            className='max-h-[40vh] sm:max-h-[50vh] md:max-h-[55vh] lg:max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl/40 shadow-[#f5f3f3]'
             alt="Profile"
             onError={(e) => {
               e.target.src = 'https://via.placeholder.com/360x400';
@@ -173,18 +173,18 @@ const About = () => {
       </div>
      <Experience/>  
 
-      <div className="h-full w-full flex flex-col items-center gap-12">
+      <div className="h-full w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
         <motion.h3 
           initial={{ opacity: 0, y: -20 ,scale:0.6}}
           whileInView={{ opacity: 1, y: 0 , scale:1}}
           viewport={{ once: true ,amount:0.3}}
           transition={{ duration: .7}}
-          className="text-5xl text-transparent bg-gradient-to-t from-[#272627] to-[#d6d4d6] bg-clip-text font-semibold will-change-transform"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-t from-[#272627] to-[#d6d4d6] bg-clip-text font-semibold will-change-transform text-center"
         >
           My Skills
         </motion.h3>
         
-        <div className="w-full flex gap-4 justify-center flex-wrap md:px-0 px-6">
+        <div className="w-full flex gap-3 sm:gap-4 justify-center flex-wrap px-2 sm:px-4 md:px-6 lg:px-0">
           {skillsData.map((item, index) => (
             <motion.div 
               key={item.id}
@@ -197,10 +197,10 @@ const About = () => {
                 scale: 1.05,
                 transition: { duration: 0.2 }
               }}
-              className="md:w-[200px] w-full h-[60px] bg-gradient-to-t from-[#201f23] to-transparent border rounded-lg border-[#1d1b24] justify-start flex items-start gap-2  p-4 hover:border-neutral-400 transition-colors duration-300 cursor-pointer shadow-sm shadow-[#131316]"
+              className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.67rem)] lg:w-[calc(25%-0.75rem)] xl:w-[200px] h-[50px] sm:h-[55px] md:h-[60px] bg-gradient-to-t from-[#201f23] to-transparent border rounded-lg border-[#1d1b24] justify-start flex items-center gap-2 sm:gap-3 p-3 sm:p-4 hover:border-neutral-400 transition-colors duration-300 cursor-pointer shadow-sm shadow-[#131316]"
             >
-              <span className="  text-sm font-semibold bg-gradient-to-t text-transparent bg-clip-text from-[#3d3a49] to-[#f1ecec] ">{item.title}</span>
-              <div className="text-xl bg-neutral-900 p-1 -mt-1 rounded-sm flex   flex-shrink-0">
+              <span className="text-xs sm:text-sm font-semibold bg-gradient-to-t text-transparent bg-clip-text from-[#3d3a49] to-[#f1ecec] flex-grow">{item.title}</span>
+              <div className="text-lg sm:text-xl bg-neutral-900 p-1 rounded-sm flex flex-shrink-0">
                 {item.icon}
               </div>
             </motion.div>
