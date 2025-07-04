@@ -22,7 +22,7 @@ const Home = () => {
     }}}
     className=' h-screen w-full flex flex-col gap-20 justify-center items-center '>
         <div className=' md:w-1/3  w-full text-center md:px-0 px-4  flex flex-col items-center gap-10'>
-        <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-[#b6b4b6] to-[#232323] bg-clip-text text-transparent '>Hie, I'm Priyanshu</h2>
+        <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-[#b6b4b6] to-[#232323] bg-clip-text text-transparent '>Hey, I'm Harshit</h2>
         <motion.p 
          initial={{color:'#241e21'}}
            animate={{

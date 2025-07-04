@@ -7,6 +7,7 @@ import About from './components/sections/About'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 
+
 const App = () => {
   const [isloaded, setIsloaded]= useState(false)
   return (
@@ -24,7 +25,7 @@ const App = () => {
     <Projects/>
     </section>
     <section id='contact'>
-    <Contact/>
+        <Contact/>
     </section>
       </div>}
     </div>

@@ -46,21 +46,25 @@ const Contact = () => {
             Let's chat about how I can help your team!
           </p>
           
-          <div className="w-full xs:w-3/4 sm:w-1/2 md:w-1/2 lg:w-1/2 p-4 md:p-5 flex justify-center gap-3 sm:gap-4">
-            {/* Social Icons - Responsive sizing */}
-            <a href="https://github.com/Priyanshu090803/" target="blank">
-              <FaGithub className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform"/>
-            </a>
-            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEKiAKeL9mqGwAAAZe8mUngvHUZpUOlQmUaS_vndDBENF1VIGoKIz4ESZ3NecRnpTM-FXdib3Y7h9v80mG9PKCo2d14zGSJsHfP-lrjctYjvZV0K0Vib9CktFx74Bt4L_CauWk=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fpriyanshu-chandra-tamta-641123320%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app" target="blank">
-              <FaLinkedin className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform"/>
-            </a>
-            <a href="https://x.com/priyanshu9_8_03?s=11" target="blank">
-              <FaSquareXTwitter className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform"/>
-            </a>
-            <a href="https://www.instagram.com/priyanshu_9_8_03?igsh=ejBiZmR0Y2w4Y2ow&utm_source=qr" target="blank">
-              <FaInstagram className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform"/>
-            </a>
-          </div>
+         <div className="w-full xs:w-3/4 sm:w-1/2 md:w-1/2 lg:w-1/2 p-4 md:p-5 flex justify-center gap-3 sm:gap-4">
+  <a href="https://github.com/harshit-kharayat23" target="_blank" rel="noopener noreferrer">
+    <FaGithub className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform" />
+  </a>
+  <a href="https://www.linkedin.com/in/heyitzharshit/" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform" />
+  </a>
+  <a href="https://x.com/23Harshitkk" target="_blank" rel="noopener noreferrer">
+    <FaSquareXTwitter className="text-neutral-200 hover:text-neutral-400 active:text-neutral-400 text-lg sm:text-xl md:text-2xl hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform" />
+  </a>
+  <a href="https://leetcode.com/u/heyitzharshit/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png"
+      alt="LeetCode"
+      className="w-5 sm:w-6 md:w-7 hover:scale-95 active:scale-95 scale-100 duration-300 delay-150 ease-out will-change-transform"
+    />
+  </a>
+</div>
+
         </div>
         
         {/* Right Section - Contact Form */}

@@ -18,7 +18,7 @@ import {
   SiNextdotjs 
 } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
-import Experience from "./ui/Experience.jsx"
+// import Experience from "./ui/Experience.jsx"
 
 const About = () => {
   // Skills data with React Icons
@@ -161,7 +161,7 @@ const About = () => {
           className='w-full md:w-1/2 flex justify-center md:justify-end p-2 sm:p-4'
         >
           <img
-            src='https://avatars.githubusercontent.com/u/156987012?s=400&u=fc5fecd280f5767bf0d11f5b8f081740d79b4a89&v=4'
+            src='https://avatars.githubusercontent.com/u/156515522?s=400&u=3ed669e41df6ea89bb42a7c392d877dac30cbe3a&v=4'
             className='max-h-[40vh] sm:max-h-[50vh] md:max-h-[55vh] lg:max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl/40 shadow-[#f5f3f3]'
             alt="Profile"
             onError={(e) => {
@@ -171,7 +171,7 @@ const About = () => {
           />
         </motion.div>
       </div>
-     <Experience/>  
+     {/* <Experience/>   */}
 
       <div className="h-full w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
         <motion.h3 
