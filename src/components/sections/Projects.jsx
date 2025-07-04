@@ -1,63 +1,56 @@
 import { motion } from "framer-motion";
+import bg1 from "../../assets/portfolio1.jpg";
+import bg2 from "../../assets/portfolio2.jpg";
+import bg3 from "../../assets/portfolio3.jpg";
+import bg4 from "../../assets/portfolio4.jpg";
+import bg5 from "../../assets/portfolio5.jpg";
 import Card from "./ui/Card";
+import { techIconMap } from "../../utils/techIcons";
 
 const Projects = () => {
   const projectData1 = {
-    title: "💬 Chat App",
-    description:
-      "A real-time chat application using Socket.IO for instant messaging.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "Socket.IO",
-      "MongoDB",
-      "Tailwind CSS",
-    ],
+    title: "💬 Chit Chat",
+    description: "A real-time chat application using Socket.IO for instant messaging.",
+    tech: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "Tailwind CSS"],
     gitLink: "https://github.com/harshit-kharayat23/chat-app",
     liveLink: "https://chit-chat-qyxv.onrender.com/",
-    bgUrl:
-      "https://img.freepik.com/premium-photo/3d-illustration-online-chatting-concept-mobile-phone_36845-641.jpg",
+    bgUrl: bg1,
     from: "#1d2966",
     to: "#4a90e2",
   };
 
   const projectData2 = {
-    title: "🐶 Bark Net",
+    title: "🐾 Bark Net",
     description:
-      "A social network for dog lovers to connect, share, and showcase pets.",
-    tech: ["React", "Redux", "Firebase", "Tailwind CSS"],
+      "A social network and dog breed identification system with EfficientNetB1-based classification integrated using Flask microservice.",
+    tech: ["React", "Redux", "Node.js", "Express", "MongoDB", "Flask", "Python", "EfficientNet", "Tailwind CSS"],
     gitLink: "https://github.com/harshit-kharayat23/bark-net",
-    liveLink: "", // Add if hosted
-    bgUrl:
-      "https://img.freepik.com/premium-photo/funny-dog-with-social-media-concept_97843-1067.jpg",
+    liveLink: "",
+    bgUrl: bg2,
     from: "#ff7e5f",
     to: "#feb47b",
   };
 
   const projectData3 = {
-    title: "❤️ Dev Tinder",
+    title: "🚀 Dev Match",
     description:
-      "Swipe-style matching platform for developers to find collaborators.",
-    tech: ["React", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"],
+      "A developer matchmaking platform with real-time chat using WebSockets and matching based on skills and interests.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Tailwind CSS", "WebSockets"],
     gitLink: "https://github.com/harshit-kharayat23/dev-tinder",
-    liveLink: "", // Add if hosted
-    bgUrl:
-      "https://img.freepik.com/premium-vector/online-dating-app-concept-young-couple-dating-via-mobile-application-flat-vector-illustration_128772-1432.jpg",
+    liveLink: "",
+    bgUrl: bg3,
     from: "#833ab4",
     to: "#fd1d1d",
   };
 
   const projectData4 = {
-    title: "🎞️ Movie Recommendation System",
+    title: "🍿 Movie Recommendation System",
     description:
-      "Content-based movie recommender that suggests similar movies.",
+      "Content-based movie recommender using cosine similarity and filtering logic, offering personalized suggestions via API.",
     tech: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
-    gitLink:
-      "https://github.com/harshit-kharayat23/Movie-Recommendation-System",
-    liveLink: "", // Add if hosted
-    bgUrl:
-      "https://img.freepik.com/premium-photo/movie-night-elements-popcorn-3d-glasses-film-strip-generative-ai_900101-17120.jpg",
+    gitLink: "https://github.com/harshit-kharayat23/Movie-Recommendation-System",
+    liveLink: "",
+    bgUrl: bg4,
     from: "#2c3e50",
     to: "#4ca1af",
   };
@@ -65,12 +58,11 @@ const Projects = () => {
   const projectData5 = {
     title: "🧠 Sentiment Analysis",
     description:
-      "Analyzes user input to detect sentiment using NLP techniques.",
-    tech: ["Python", "Flask", "NLTK", "Sklearn", "HTML", "CSS"],
+      "Flipkart product review sentiment analyzer using Selenium, BeautifulSoup, and NLTK, visualized via Streamlit dashboard.",
+    tech: ["Python", "NLTK", "Selenium", "BeautifulSoup", "Streamlit"],
     gitLink: "https://github.com/harshit-kharayat23/Sentimental_analysis",
-    liveLink: "", // Add if hosted
-    bgUrl:
-      "https://img.freepik.com/premium-vector/sentiment-analysis-concept-illustration_251005-445.jpg",
+    liveLink: "",
+    bgUrl: bg5,
     from: "#f12711",
     to: "#f5af19",
   };
@@ -81,53 +73,27 @@ const Projects = () => {
     projectData3,
     projectData4,
     projectData5,
-    // Add your older projects below this if you want
   ];
 
-  // Container animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between each child animation
-        delayChildren: 0.3, // Initial delay before first child starts
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
 
-  // Individual card animation variants
   const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  // Title animation variants
   const titleVariants = {
-    hidden: {
-      opacity: 0,
-      y: -30,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
+    hidden: { opacity: 0, y: -30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   return (
@@ -155,7 +121,7 @@ const Projects = () => {
             variants={cardVariants}
             className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] xl:w-[calc(30%-1.5rem)] max-w-[400px] min-w-[280px]"
           >
-            <Card project={project} />
+            <Card project={project} iconMap={techIconMap} />
           </motion.div>
         ))}
       </motion.div>
