@@ -23,23 +23,25 @@ const Home = () => {
     className=' h-screen w-full flex flex-col gap-20 justify-center items-center '>
         <div className=' md:w-1/3  w-full text-center md:px-0 px-4  flex flex-col items-center gap-10'>
         <h2 className='   md:text-6xl text-5xl font-semibold bg-gradient-to-t from-[#b6b4b6] to-[#232323] bg-clip-text text-transparent '>Hey, I'm Harshit</h2>
-        <motion.p 
-         initial={{color:'#241e21'}}
-           animate={{
-           color: [
-      '#e4e4e7', // Zinc-100 (bright silver)
-      '#a1a1aa', // Zinc-400 (metallic gray)
-      '#71717a', // Zinc-500 (gunmetal)
-      '#52525b', // Zinc-600 (dark steel)
-      '#6e6f7c', // Cyan-200 (ice highlight)
-      '#4b5b69', // Blue-200 (frost)
+        <motion.p
+  initial={{ color: '#241e21' }}
+  animate={{
+    color: [
+      '#e4e4e7', '#a1a1aa', '#71717a', '#52525b', '#6e6f7c', '#4b5b69'
     ],
-          }}
-        
-         transition={{duration:3,repeat:Infinity, repeatType: "reverse",ease: "linear"}}
-                        // variants={textVariants}
+  }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    repeatType: "reverse",
+    ease: "linear"
+  }}
+  className="text-sm text-center"
+>
+  A <span className="text-base text-[#6ebfc8]">Full Stack Developer</span> building intelligent, real-time & scalable web apps using MERN & ML.
+</motion.p>
 
-        className='   text-sm text-center'>A passionate <span className=' text-base text-[#6ebfc8]'>Full Stack Developer</span> dedicated to crafting fast, responsive, and visually stunning websites...</motion.p>
+
     </div>
     <div className=' md:w-1/3 w-full px-10 flex gap-12 text-white justify-center'>
       <motion.span
